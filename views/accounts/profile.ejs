@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Profile</title>
+     <style type="text/css">
+     .profile{
+       margin: 50px;
+     }
+     </style>
+  </head>
+  <body>
+    <div class="profile">
+      <p><h2>My Profile</h2></p>
+      <br>
+    Name : <%= user.fullName %>
+    <br>
+    Programme : <%= user.programme %>
+    <br>
+    Branch : <%= user.branch %>
+    <br>
+    Year : <%= user.year %>
+    <br>
+    Roll Number : <%= user.rollno %>
+    <br>
+    Phone Number : <%= user.phoneNo %>
+    <br>
+    Hostel : <%= user.hostelno %>
+    <br>
+    Room Number : <%= user.roomNo %>
+    <br>
+    <br>
+     <!-- <button class="btn btn-primary" type="submit" name="button">Edit Profile</button> -->
+    <p><a href="/edit">Edit Profile</a></p>
+    <p><a href="/add-product">Add Product</a></p>
+    <p> <a href="/my-products"> My Products </a> </p>
+    <!-- <p> <a href="/edit-product"> Edit Your Product </a> </p> -->
+    <p><a href="/"> Back To Home </a></p>
+  </div>
+  </body>
+</html>

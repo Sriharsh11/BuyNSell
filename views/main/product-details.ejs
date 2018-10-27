@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>product details</title>
+    <style type="text/css">
+      .product{
+        margin: 50px;
+      }
+      .picture{
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <h1>Product Details</h1>
+      <br>
+    <h2>  Name of the product : <%= product[product.length - 1].name %> </h1>
+      <br>
+  <h2>    Category : <%= product[product.length - 1].category %> </h2>
+      <br>
+  <h2>    Price : <%= product[product.length - 1].price %> </h2>
+      <br>
+      <h2>Image :</h2>
+      <p>
+        <img class="picture" src=<%= product[product.length - 1].image %> >
+      </p>
+      <p><h2><a href="/profile">Back to Profile </h2> </a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Single Product Page</title>
+    <style type="text/css">
+      .picture{
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Name : <%= product.name %> </h2>
+        <br>
+      <h2>Category :  <%= product.category %> </h2>
+        <br>
+      <h2>Price :  <%= product.price %> </h2>
+        <br>
+      <h2>Image : </h2>  <img class="picture" src=<%= product.image %> >
+      <br>
+    <h1> <a href="/cart-add/<%= product._id %>">Add product to cart</a> </h1>
+      <br>
+    <h1>  <a href="/cart-remove/<%= product._id %>">Remove product from cart</a> </h1>
+  </body>
+</html>
