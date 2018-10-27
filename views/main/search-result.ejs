@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search Results</title>
+    <style type="text/css">
+      .container{
+        border : 3px solid black;
+        padding: 2px;
+        margin: 5px;
+      }
+      .picture{
+        height: 150px;
+        width : 150px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <% if(count == 0) { %>
+      <h1>Sorry, no such products found!</h1>
+    <% } else { %>
+       <h1>Search Results :</h1>
+      <% for(var i=0; i< results.length; i++) { %>
+        <a href="/product/<%= results[i]._id %>">
+        <div class="container">
+          <h2>Name : <%= results[i].name %> </h2>
+            <br>
+          <h2>Category :  <%= results[i].category %> </h2>
+            <br>
+          <h2>Price :  <%= results[i].price %> </h2>
+            <br>
+          <h2>Image : </h2>  <img class="picture" src=<%= results[i].image %> >
+          </div>
+        </a>
+      <% } %>
+    <% } %>
+  </body>
+</html>

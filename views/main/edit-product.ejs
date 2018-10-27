@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <form method="post" action="/edit/<%= product._id %>">
+  <div class="form-group">
+    <!-- <label for="category">Category</label>
+    <input type="text" class="form-control" id="category" placeholder="Enter category" name="category"> -->
+    <div class="form group">
+      <label class="col-md-4">Category</label>
+      <input list="category" type="text" class="form-control" name="category" value=<%= product.category %> >
+      <datalist id="category">
+        <% for(var i=0;i< category.length ; i++) {%>
+          <option> <%= category[i].name %> </option>
+        <% } %>
+      </datalist>
+    </div>
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <div class="form-group">
+    <label for="name">Name of the product</label>
+    <input type="text" class="form-control" id="name" placeholder="name" name="name" value=<%= product.name %>>
+  </div>
+  <div class="form-group">
+    <label for="price">Price of the product</label>
+    <input type="text" class="form-control" id="price" placeholder="price" name="price" value=<%= product.price %>>
+  </div>
+  <div class="form-group">
+    <label for="image">Image of the product</label>
+    <input type="text" class="form-control" id="image" placeholder="image" name="image" value=<%= product.image %>>
+  </div>
+  <!-- <div class="form-group">
+    <label for="image">Image of the product</label>
+    <input type="file" class="form-control" id="image" name="image">
+  </div> -->
+  <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+  </body>
+</html>

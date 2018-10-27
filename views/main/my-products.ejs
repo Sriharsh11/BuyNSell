@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Products</title>
+    <style type="text/css">
+      .container{
+        margin-left: 50px;
+        margin-top: 25px;
+      }
+      .picture{
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Products</h1>
+    <% for(var i=0;i< products.length; i++)  { %>
+      <div class="container">
+        <h2>Name : <%= products[i].name %> </h2>
+          <br>
+        <h2>Category :  <%= products[i].category %> </h2>
+          <br>
+        <h2>Price :  <%= products[i].price %> </h2>
+          <br>
+        <h2>Image : </h2>  <img class="picture" src=<%= products[i].image %> >
+        <br>
+        <h2> <a href="/edit/<%= products[i]._id %>">Edit this product</a> </h2>
+        </div>
+    <% } %>
+      </div>
+  </body>
+</html>

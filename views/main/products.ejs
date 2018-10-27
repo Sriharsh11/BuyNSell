@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Products</title>
+    <style type="text/css">
+      .container{
+        border : 3px solid black;
+        padding: 2px;
+        margin: 5px;
+      }
+      .picture{
+        height: 150px;
+        width : 150px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <form action="/search-results/<%= category._id %>" method="post">
+      <div class="form-group">
+        <!-- <label for="product">Search for your product</label> -->
+        <input type="text" class="form-control" id="product" placeholder="search for your product" name="word">
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <!-- <input type="text" name="word" placeholder="search for your desired product"><span class="glyphicon glyphicon-search"></span> -->
+    <% for(var i=0; i< products.length ; i++) { %>
+      <a href="/product/<%= products[i]._id %>">
+      <div class="container">
+        <h2>Name : <%= products[i].name %> </h2>
+          <br>
+        <h2>Category :  <%= products[i].category %> </h2>
+          <br>
+        <h2>Price :  <%= products[i].price %> </h2>
+          <br>
+        <h2>Image : </h2>  <img class="picture" src=<%= products[i].image %> >
+        </div>
+      </a>
+      <% } %>
+  </body>
+</html>

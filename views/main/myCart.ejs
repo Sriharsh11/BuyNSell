@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Cart</title>
+    <style type="text/css">
+      .container{
+        border : 3px solid black;
+        padding: 2px;
+        margin: 5px;
+      }
+      .picture{
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h1> My Cart </h1>
+    <h1>Cart total : Rs <%= myCart.price %></h1>
+
+      <% for(var i=0; i < myCart.items.length; i++) { %>
+        <a href="/product/<%= myCart.items[i]._id %>">
+        <div class="container">
+          <h2>Name : <%= myCart.items[i].name %> </h2>
+            <br>
+          <h2>Category :  <%= myCart.items[i].category %> </h2>
+            <br>
+          <h2>Price :  <%= myCart.items[i].price %> </h2>
+            <br>
+          <h2>Image : </h2>  <img class="picture" src=<%= myCart.items[i].image %> >
+          </div>
+        </a>
+      <% } %>
+  </body>
+</html>

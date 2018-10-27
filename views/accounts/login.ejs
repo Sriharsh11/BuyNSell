@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Homepage</title>
+  </head>
+  <body>
+    <!-- <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Sign In</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="text" placeholder="email" aria-label="email" name="email">
+      <input class="form-control mr-sm-2" type="text" placeholder="password" aria-label="password" name="password">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+    </form>
+  </nav> -->
+  <% if(message.length > 0) { %>
+    <div class="alert alert-danger alert-dismissible">
+       <button type="button" class="close" data-dismmiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       <%= message %>
+     </div>
+   <% } %>
+  <!-- {{# if success}}
+   <p class="alert alert-success">Validated Successfully.</p>
+   {{/if}} -->
+   <p><h1>Login</h1></p>
+    <form method="post" action="/login">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </body>
+</html>
