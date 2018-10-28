@@ -4,7 +4,7 @@
    ---------------------
    An e-commerce website to allow college students to buy and
    sell their products.
-    
+ Technologies used : Node.js, express, mongodb, html, css, bootstrap   
 
 . Brief description of the project and Future Scope : 
    ---------------------------------------------------
@@ -24,3 +24,4 @@
    Authors : Sriharsh Aditya
 	     Amit Tiwary
 	     Ushran Gouhar
+	     
