@@ -212,16 +212,20 @@ router.post('/payment',function(req,res,next){
     console.log("Payment Successful");
     Cart.findOne({owner: req.user._id},function(err,cart){
       if(err) return next(err);
-      for(var i=0; i< cart.items.length ; i++){
-        cart.total = cart.total - 1;
-        cart.price = cart.price - cart.items[i].price;
-        cart.items.pull(cart.items[i]);
-        //cart.save();
-      }
-      cart.save();
-      res.redirect('/');
+      // for(var i=0; i< cart.items.length ; i++){
+      //   cart.total = cart.total - 1;
+      //   cart.price = cart.price - cart.items[i].price;
+      //   cart.items.pull(cart.items[i]);
+      //   //cart.save();
+      // }
+      cart.total = 0;
+      cart.price = 0;
+      cart.items.splice(0,cart.items.length);
+      cart.save(function(err){
+        res.redirect('/');
+      });
     });
-});
+  });
 
 
 module.exports = router;

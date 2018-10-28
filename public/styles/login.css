@@ -1,0 +1,62 @@
+
+header{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-bottom: 2%;
+}
+.loginContainer{
+    margin-top: 3%;
+    padding-bottom:2%;
+    width:50%;
+    background-image: linear-gradient(to bottom right,rgba(3, 46, 48,0.7), rgba(11, 115, 119,0.7));
+    border:1px solid gray;
+
+}
+.loginHeading{
+    padding-top: 3%;
+    margin-bottom: 2%;
+    font-size: 170%; 
+    font-family: Roboto,sans-serif;
+    color: rgb(234,136,97);
+
+}
+.loginHeading>svg{
+    stroke:white;
+    stroke-width: 1.5px;
+    padding-top:5%;
+    height: 2px;    
+}
+.lfield{
+    font-size: 15px;
+    padding: 10px;
+    width: 70%;
+    border:1px solid rgb(176,207,218);
+    border-radius: 5px;
+    margin:5px;
+    background-color: rgb(236, 236, 236);
+}
+#loginBtn{
+    font-size: 18px;
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+    margin:5px;
+    background-color:rgb(245, 106, 51);
+    color:white;
+    border: 0px;
+}
+#loginBtn:hover{
+    cursor: pointer;
+    background-color:rgb(240, 119, 72);
+    
+}
+.newUser{
+    font-family: Roboto,sans-serif;
+    color:white;
+}
+.newUser>a{
+    color:rgb(234,136,97);
+}
+footer{
+    padding:5%;
+}

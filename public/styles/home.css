@@ -1,0 +1,141 @@
+header{
+    border-bottom: 1px solid silver;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-bottom: 2%;
+    
+}
+.logoDiv{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    padding-top:5%;
+}
+.registerBtn{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-top:5%;
+}
+.loginBtn, .signupBtn{
+    font-size:150%;
+    border-radius: 20px;
+    padding-left:10%;
+    padding-right:10%;
+    background-color: white;
+    color:darkblue;
+    border:1px solid darkblue;
+    width:35%;
+}
+.searchBar{
+    padding-top:2%;
+    padding-bottom: 2%;
+}
+#searchbar{
+    width: 50%;
+    font-size: 120%;
+    border: 10px solid rgb(176,207,218);
+    border-radius: 20px;
+    padding: 0.6%;
+}
+.closeList{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    padding:0px;
+    margin-right:24.5%;
+    margin-top:3%;
+    background-color: white;
+    color:gray;
+    border:0px;
+}
+.closeList:hover{
+    color: rgb(240, 107, 107);
+}
+.dropdown-menu{
+    margin-left:26%;
+    margin-top:-2%;
+    width:48%;
+    padding-left:5px;
+    padding-right: 5px;
+    overflow:auto;
+
+}
+.dropdown-menu>li:hover{
+    background-color: rgb(46, 95, 158);
+    color: white;
+    cursor: pointer;
+}
+.pro-cat{
+    display: grid;
+    justify-content: center;
+    padding-top:3%;
+    grid-gap: 15px;
+    
+}
+.products-icon{
+    border:0px solid black;
+    width:110px;
+    height: 110px;
+}   
+.products{
+    text-align: center;
+    background-color:white;
+    -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+.products:hover{
+    border:1px solid skyblue;
+    transform: scale(1.3,1.3);
+}
+.products>a:hover{
+    text-decoration: none;
+}
+.study{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    
+}
+.electronics{
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+}
+.sports{
+    grid-row: 1/2;
+    grid-column: 3/4;
+
+}
+.cycles{
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+}
+.others{
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+}
+
+
+.hline{
+    background-color: white; 
+    height:1px;width:50%;
+    margin-top:3%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}

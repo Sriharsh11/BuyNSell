@@ -1,15 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-    <title>Homepage</title>
+
     <style type="text/css">
-      /* .container{
-        border : 3px solid black;
-        padding: 2px;
-        margin: 5px;
-      } */
+
       .about{
         margin: 50px;
       }
@@ -19,9 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
-       <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  -->
+
     <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <% if(!user)  { %>
@@ -41,19 +34,137 @@
     <p> <a href='/products/<%= category[i]._id %>' ><%= category[i].name %></a> </p>
   <% } %>
 </div>
-<!-- <% for(var i=0;i< product.length; i++)  { %>
-    <a href="/product/<%= product[i]._id %>">
-    <div class="container">
-      <h2>Name : <%= product[i].name %> </h2>
-        <br>
-      <h2>Category :  <%= product[i].category %> </h2>
-        <br>
-      <h2>Price :  <%= product[i].price %> </h2>
-        <br>
-      <h2>Image : </h2>  <img src=<%= product[i].image %> >
-      </div>
-    </a>
-  <% } %> -->
+
   </form>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buy and Sell</title>
+</head>
+<body>
+<header style="background-image:url(logo/logo.jpg);background-repeat: no-repeat;">
+<div class="logoDiv"></div>
+<div class="registerBtn">
+    <center>
+      <% if(!user)  { %>
+    <a href="/login"><button class="loginBtn btn btn-primary">Login</button></a>&ensp;
+    <a href="/signup"><button class="signupBtn btn btn-primary">Sign-Up</button></a>
+    <% } %>
+    <% if(user)  { %>
+      <a href="/profile"><button class="loginBtn btn btn-primary"> <%= user.fullName %> </button></a>&ensp;
+      <a href="/logout"><button class="signupBtn btn btn-primary">Logout</button></a>
+      <a href="/cart" class="glyphicon glyphicon-shopping-cart"> <span class="badge"> <%= cart %> </span> </a> </li>
+    <% } %>
+    </center>
+</div>
+</header>
+
+<main>
+    <div class="searchBar dropdown">
+        <center>
+            <input type="text" placeholder="Search Colleges..." id="searchbar" class="dropdown-toggle" data-toggle="dropdown" onkeyup="searchCollege()"/>
+
+                <button type="button" class="closeList" aria-label="Close" onclick="removeCollegeList()">
+                    &times;
+                </button>
+                <ul class="dropdown-menu" id="collegeList">
+                    <li>Amity University, Noida</li>
+                    <li>Birla Institute of Technology, Mesra</li>
+                    <li>Birla Institute of Technology and Science, Pilani</li>
+                    <li>All India Institute of Medical Sciences, Delhi</li>
+                    <li>All India Institute of Medical Sciences, Bhopal</li>
+                    <li>All India Institute of Medical Sciences, Bhubaneshwar</li>
+                    <li>All India Institute of Medical Sciences, Jodhpur</li>
+                    <li>All India Institute of Medical Sciences, Patna</li>
+                    <li>All India Institute of Medical Sciences, Raipur</li>
+                    <li>All India Institute of Medical Sciences, Nagpur</li>
+                    <li>Indian Institute of Technology, Roorkee</li>
+                    <li>Indian Institute of Technology, Madras</li>
+                    <li>Indian Institute of Technology, Kharagpur</li>
+                    <li>Indian Institute of Technology, Kanpur</li>
+                    <li>Indian Institute of Technology, Guwahati</li>
+                    <li>Indian Institute of Technology, Dhanbad</li>
+                    <li>Indian Institute of Technology, Delhi</li>
+                    <li>Indian Institute of Technology, Bombay</li>
+                    <li>Indian Institute of Information Technology, Hyderabad</li>
+                    <li>Indian Institute of Information Technology, Allahabad</li>
+                    <li>Vellore Institute of Technology</li>
+                </ul>
+        </center>
+    </div>
+</main>
+<div class="pro-cat">
+  <% for(var i=0;i< category.length ; i++) { %>
+    <div class= <%= category[i].name %> >
+        <div class="products">
+        <a href="/products/<%= category[i]._id %>">
+        <img src="/icons/<%= category[i].name %>.jpg" class="products-icon" />
+        </a>
+        <br> <%= category[i].name %>
+        </div>
+    </div>
+  <% } %>
+        <!-- <div class="study">
+            <div class="products">
+            <a href="#">
+            <img src="icons/study.jpg" class="products-icon" />
+            <br>Study
+            </div>
+            </a>
+        </div>
+        <div class="electronics">
+            <div class="products">
+            <a href="electronics.html">
+            <img src="icons/electronics.jpg" class="products-icon"  />
+            <br>Electronics
+            </a>
+            </div>
+        </div>
+        <div class="sports">
+            <div class="products">
+            <a href="#">
+            <img src="icons/sports.jpg" class="products-icon"  />
+            <br>Sports
+            </a>
+            </div>
+        </div>
+        <div class="cycles">
+            <div class="products">
+            <a href="#">
+            <img src="icons/cycle.jpg" class="products-icon"  />
+            <br>Cycles
+            </a>
+            </div>
+        </div>
+        <div class="others">
+            <div class="products">
+            <a href="#">
+            <img src="icons/others.jpg" class="products-icon"  />
+            <br>Others
+            </a>
+            </div>
+        </div> -->
+</div>
+
+<footer>
+
+</footer>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="scripts/home.js"></script>
+<link rel="stylesheet" href="styles/home.css" />
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</body>
 </html>

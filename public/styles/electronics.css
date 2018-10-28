@@ -1,0 +1,55 @@
+
+header{
+    border-bottom: 1px solid silver;
+    padding-bottom: 8%;
+    margin-bottom: 20px;
+    
+}
+
+.electronics{
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    width: 100%;
+}
+.products{
+    height:100%;
+    background-color:white;
+    border:1px solid rgb(248, 111, 20);
+}
+.info{
+    padding-left:20px;
+    padding-top:10px;
+    font-family: Roboto,sans-serif;
+    border-top:40px solid rgb(248, 111, 20);
+    
+}
+.description{
+    font-size:13px;
+}
+.addToCart{
+    background-color: rgb(248, 111, 20);
+    color:white;
+    width:40%;
+    padding:10px;
+    font-size: 110%;
+    border:0px;
+}
+.addToCart:hover{
+    cursor: pointer;
+    background-color: rgb(255, 133, 32);
+}
+.proImg{
+    width:60%;
+    height:60%;
+    
+}
+.products:nth-child(1){
+    grid-row: 1/2;
+}
+.products:nth-child(2){
+    grid-row: 1/2;
+}
+.products:nth-child(3){
+    grid-row: 1/2;
+}
