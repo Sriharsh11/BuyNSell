@@ -45,6 +45,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Buy and Sell</title>
+    <style type="text/css">
+    .glyphicon{
+      font-size: 200%;
+      margin-top: 20px;
+    }
+    </style>
 </head>
 <body>
 <header style="background-image:url(logo/logo.jpg);background-repeat: no-repeat;">
@@ -58,20 +64,23 @@
     <% if(user)  { %>
       <a href="/profile"><button class="loginBtn btn btn-primary"> <%= user.fullName %> </button></a>&ensp;
       <a href="/logout"><button class="signupBtn btn btn-primary">Logout</button></a>
-      <a href="/cart" class="glyphicon glyphicon-shopping-cart"> <span class="badge"> <%= cart %> </span> </a> </li>
+      <a href="/cart" class="glyphicon glyphicon-shopping-cart" id="icon"> <span class="badge"> <%= cart %> </span> </a> </li>
     <% } %>
     </center>
 </div>
 </header>
 
-<main>
+<main id="colleges">
     <div class="searchBar dropdown">
         <center>
-            <input type="text" placeholder="Search Colleges..." id="searchbar" class="dropdown-toggle" data-toggle="dropdown" onkeyup="searchCollege()"/>
+          <form method="post">
 
-                <button type="button" class="closeList" aria-label="Close" onclick="removeCollegeList()">
+          </form>
+            <input type="text" placeholder="Search Colleges..." id="searchbar" class="dropdown-toggle" data-toggle="dropdown" />
+
+                <!-- <button type="button" class="closeList" aria-label="Close" onclick="removeCollegeList()">
                     &times;
-                </button>
+                </button> -->
                 <ul class="dropdown-menu" id="collegeList">
                     <li>Amity University, Noida</li>
                     <li>Birla Institute of Technology, Mesra</li>
@@ -95,9 +104,13 @@
                     <li>Indian Institute of Information Technology, Allahabad</li>
                     <li>Vellore Institute of Technology</li>
                 </ul>
+                <button type="submit" class="btn btn-default" name="button">Search</button>
         </center>
     </div>
 </main>
+<div>
+  <h2 id="welcome"></h2>
+</div>
 <div class="pro-cat">
   <% for(var i=0;i< category.length ; i++) { %>
     <div class= <%= category[i].name %> >
@@ -165,6 +178,12 @@
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(#button).click(function(){
+  $(#colleges).css('display','none');
+  $(#welcome).html('Welcome to'+' '+$(#searchbar).value());
+});
+</script>
 
 </body>
 </html>

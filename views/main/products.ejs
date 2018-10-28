@@ -13,6 +13,15 @@
         height: 150px;
         width : 150px;
       }
+      .form-group{
+          margin: 0 auto;
+          width: 250px;
+      }
+      /* #search{
+        position: absolute;
+        left: 50%;
+        top: 40px;
+      } */
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -23,8 +32,10 @@
       <div class="form-group">
         <!-- <label for="product">Search for your product</label> -->
         <input type="text" class="form-control" id="product" placeholder="search for your product" name="word">
+        <br>
+        <button type="submit" class="btn btn-primary" id="search">Search</button>
       </div>
-      <button type="submit" class="btn btn-primary">Search</button>
+      <!-- <button type="submit" class="btn btn-primary" id="search">Search</button> -->
     </form>
     <!-- <input type="text" name="word" placeholder="search for your desired product"><span class="glyphicon glyphicon-search"></span> -->
     <% for(var i=0; i< products.length ; i++) { %>
