@@ -10,7 +10,7 @@
  same time when a guy moves from the 1st to the 2nd year there are
  alot of things which become useless to him. For example- a guy in the
  1st year needs bicycle which a 4th year student has no use of.
- 
+
  OUR SOLUTION :
  Our website provides a common platform for the sellers and the buyers
  where the sellers put up goods for sale. The buyer can find the best
@@ -25,16 +25,16 @@
  are located away from cities and for getting things bought and sold
  noone would consider taking the pain of travelling a long distance all
  the way to the cities. He/she would want to get it sold or bought within
- the campus itself. 
- 
+ the campus itself.
+
  TECHNOLOGIES USED :
  FRONTEND : HTML, CSS, JAVASCRIPT, BOOTSTRAP
- 
+
  BACKEND : Node.js, Express, mongoDB
- 
+
  APIs : Stripe Payments
 
-Functionality : 
+Functionality :
 So, what we actually want to achieve is that as soon as someone
 browses our website, the user will be asked to enter his/her college
 name. As soon as he/she finds his college the user presses enter and
@@ -43,3 +43,22 @@ commerce website where he/she can buy and sell products. As of
 now(31/10/2018), the website is available for just one college. We
 haven’t hosted it yet. But it would hosted as soon as the payment
 gateway is ready for use.
+
+Demo :
+So, this is what our Homepage looks like :
+
+<div align="center">
+    <img src="/screenshots/buyNsell2.png" width="400px"</img>
+</div>
+
+These are the list of the colleges :
+
+<div align="center">
+    <img src="/screenshots/search.png" width="400px"</img>
+</div>
+
+Once you find your college and hit enter, you are redirected to your own college portal :
+
+<div align="center">
+    <img src="/screenshots/portal.png" width="400px"</img>
+</div>
