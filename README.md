@@ -29,5 +29,7 @@
  
  TECHNOLOGIES USED :
  FRONTEND : HTML, CSS, JAVASCRIPT, BOOTSTRAP
+ 
  BACKEND : Node.js, Express, mongoDB
+ 
  APIs : Stripe Payments
