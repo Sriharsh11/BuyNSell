@@ -48,17 +48,17 @@ Demo :
 So, this is what our Homepage looks like :
 
 <div align="center">
-    <img src="/screenshots/buyNsell2.png" width="400px"</img>
+    <img src="/screenshots/buyNsell2.png" </img>
 </div>
 
 These are the list of the colleges :
 
 <div align="center">
-    <img src="/screenshots/search.png" width="400px"</img>
+    <img src="/screenshots/search.png" </img>
 </div>
 
 Once you find your college and hit enter, you are redirected to your own college portal :
 
 <div align="center">
-    <img src="/screenshots/portal.png" width="400px"</img>
+    <img src="/screenshots/portal.png" </img>
 </div>
