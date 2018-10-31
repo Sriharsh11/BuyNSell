@@ -33,3 +33,13 @@
  BACKEND : Node.js, Express, mongoDB
  
  APIs : Stripe Payments
+
+Functionality : 
+So, what we actually want to achieve is that as soon as someone
+browses our website, the user will be asked to enter his/her college
+name. As soon as he/she finds his college the user presses enter and
+he/she is redirected to his own college portal i.e., the college’s own e-
+commerce website where he/she can buy and sell products. As of
+now(31/10/2018), the website is available for just one college. We
+haven’t hosted it yet. But it would hosted as soon as the payment
+gateway is ready for use.
