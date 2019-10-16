@@ -73,5 +73,5 @@ app.use(adminRoutes);
 app.use(customerRoutes);
 
 app.listen(secret.port,() => {
-  console.log('listening at 2000');
+  console.log('listening at ${secret.port}');
 });
