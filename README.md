@@ -29,7 +29,7 @@
  the way to the cities. He/she would want to get it sold or bought within
  the campus itself.
 
- ## TECHNOLOGIES USED
+ ## Technolgies Used
  
  - **Frontend** - HTML, CSS, JavaScript, Bootstrap
 
