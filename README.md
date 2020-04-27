@@ -1,4 +1,5 @@
- PROBLEM STATEMENT :
+ ## Problem Statement 
+ 
  Every newbie entering college has to face an initial period of hustle
  where he's confused as to where he can get all important goods
  required for his day to day life. He wanders around for stuff like
@@ -11,7 +12,8 @@
  alot of things which become useless to him. For example- a guy in the
  1st year needs bicycle which a 4th year student has no use of.
 
- OUR SOLUTION :
+ ## Our Solution
+ 
  Our website provides a common platform for the sellers and the buyers
  where the sellers put up goods for sale. The buyer can find the best
  price for a particular item(our webiste will sort goods according to
@@ -27,14 +29,16 @@
  the way to the cities. He/she would want to get it sold or bought within
  the campus itself.
 
- TECHNOLOGIES USED :
- FRONTEND : HTML, CSS, JAVASCRIPT, BOOTSTRAP
+ ## TECHNOLOGIES USED
+ 
+ - **Frontend** - HTML, CSS, JavaScript, Bootstrap
 
- BACKEND : Node.js, Express, mongoDB
+ - **Backend** - Node.js, Express, mongoDB
 
- APIs : Stripe Payments
+ - **External Public APIs** - Stripe Payments
 
-Functionality :
+## Functionality
+
 So, what we actually want to achieve is that as soon as someone
 browses our website, the user will be asked to enter his/her college
 name. As soon as he/she finds his college the user presses enter and
@@ -44,7 +48,8 @@ now(31/10/2018), the website is available for just one college. We
 haven’t hosted it yet. But it would hosted as soon as the payment
 gateway is ready for use.
 
-Demo :
+## Demo
+
 So, this is what our Homepage looks like :
 
 <div align="center">
